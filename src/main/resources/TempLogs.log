@@ -1,0 +1,120 @@
+2023-10-14 18:58:35 INFO  CsgoItemHandlerApplication:51 - Starting CsgoItemHandlerApplication using Java 19-ea with PID 23840 (E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\target\classes started by timle in E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler)
+2023-10-14 18:58:35 INFO  CsgoItemHandlerApplication:637 - No active profile set, falling back to 1 default profile: "default"
+2023-10-14 18:58:36 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-10-14 18:58:36 INFO  Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-14 18:58:36 INFO  StandardService:173 - Starting service [Tomcat]
+2023-10-14 18:58:36 INFO  StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-14 18:58:36 INFO  [/]:173 - Initializing Spring embedded WebApplicationContext
+2023-10-14 18:58:36 INFO  ServletWebServerApplicationContext:291 - Root WebApplicationContext: initialization completed in 977 ms
+2023-10-14 18:58:36 INFO  Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-14 18:58:36 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-14 18:58:36 INFO  CsgoItemHandlerApplication:57 - Started CsgoItemHandlerApplication in 1.67 seconds (process running for 2.56)
+2023-10-14 18:58:39 INFO  [/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-14 18:58:39 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2023-10-14 18:58:39 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2023-10-14 18:58:39 DEBUG DebugLogger:30 - /JSON has been called! Everything works fine
+2023-10-14 19:02:30 INFO  CsgoItemHandlerApplication:51 - Starting CsgoItemHandlerApplication using Java 19-ea with PID 9108 (E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\target\classes started by timle in E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler)
+2023-10-14 19:02:30 INFO  CsgoItemHandlerApplication:637 - No active profile set, falling back to 1 default profile: "default"
+2023-10-14 19:02:31 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-10-14 19:02:31 INFO  Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:02:31 INFO  StandardService:173 - Starting service [Tomcat]
+2023-10-14 19:02:31 INFO  StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-14 19:02:31 INFO  [/]:173 - Initializing Spring embedded WebApplicationContext
+2023-10-14 19:02:31 INFO  ServletWebServerApplicationContext:291 - Root WebApplicationContext: initialization completed in 966 ms
+2023-10-14 19:02:31 INFO  Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:02:31 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-14 19:02:31 INFO  CsgoItemHandlerApplication:57 - Started CsgoItemHandlerApplication in 1.63 seconds (process running for 2.531)
+2023-10-14 19:02:37 INFO  [/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-14 19:02:37 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2023-10-14 19:02:37 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2023-10-14 19:02:37 ERROR DebugLogger:30 - /JSON has been called
+2023-10-14 19:13:42 INFO  CsgoItemHandlerApplication:51 - Starting CsgoItemHandlerApplication using Java 19-ea with PID 29092 (E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\target\classes started by timle in E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler)
+2023-10-14 19:13:42 INFO  CsgoItemHandlerApplication:637 - No active profile set, falling back to 1 default profile: "default"
+2023-10-14 19:13:43 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-10-14 19:13:43 INFO  Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:13:43 INFO  StandardService:173 - Starting service [Tomcat]
+2023-10-14 19:13:43 INFO  StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-14 19:13:43 INFO  [/]:173 - Initializing Spring embedded WebApplicationContext
+2023-10-14 19:13:43 INFO  ServletWebServerApplicationContext:291 - Root WebApplicationContext: initialization completed in 954 ms
+2023-10-14 19:13:43 INFO  Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:13:43 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-14 19:13:43 INFO  CsgoItemHandlerApplication:57 - Started CsgoItemHandlerApplication in 1.593 seconds (process running for 2.451)
+2023-10-14 19:14:15 INFO  CsgoItemHandlerApplication:51 - Starting CsgoItemHandlerApplication using Java 19-ea with PID 27476 (E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\target\classes started by timle in E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler)
+2023-10-14 19:14:15 INFO  CsgoItemHandlerApplication:637 - No active profile set, falling back to 1 default profile: "default"
+2023-10-14 19:14:16 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-10-14 19:14:16 INFO  Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:14:16 INFO  StandardService:173 - Starting service [Tomcat]
+2023-10-14 19:14:16 INFO  StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-14 19:14:16 INFO  [/]:173 - Initializing Spring embedded WebApplicationContext
+2023-10-14 19:14:16 INFO  ServletWebServerApplicationContext:291 - Root WebApplicationContext: initialization completed in 958 ms
+2023-10-14 19:14:17 INFO  Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:14:17 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-14 19:14:17 INFO  CsgoItemHandlerApplication:57 - Started CsgoItemHandlerApplication in 1.621 seconds (process running for 2.502)
+2023-10-14 19:15:14 INFO  [/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-14 19:15:14 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2023-10-14 19:15:14 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2023-10-14 19:15:14 WARN  DefaultHandlerExceptionResolver:207 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-10-14 19:15:28 WARN  DefaultHandlerExceptionResolver:207 - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.Map<java.lang.String, java.lang.Object> com.Home.Tim.CSGOItemHandler.Restcontroller.updateSkin(java.lang.String,java.lang.Double,java.lang.Double,java.lang.Double,java.lang.Double,java.lang.String)]
+2023-10-14 19:19:03 INFO  CsgoItemHandlerApplication:51 - Starting CsgoItemHandlerApplication using Java 19-ea with PID 26476 (E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\target\classes started by timle in E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler)
+2023-10-14 19:19:03 INFO  CsgoItemHandlerApplication:637 - No active profile set, falling back to 1 default profile: "default"
+2023-10-14 19:19:03 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-10-14 19:19:03 INFO  Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:19:03 INFO  StandardService:173 - Starting service [Tomcat]
+2023-10-14 19:19:03 INFO  StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-14 19:19:03 INFO  [/]:173 - Initializing Spring embedded WebApplicationContext
+2023-10-14 19:19:03 INFO  ServletWebServerApplicationContext:291 - Root WebApplicationContext: initialization completed in 906 ms
+2023-10-14 19:19:04 INFO  Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:19:04 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-14 19:19:04 INFO  CsgoItemHandlerApplication:57 - Started CsgoItemHandlerApplication in 1.555 seconds (process running for 2.405)
+2023-10-14 19:19:08 INFO  [/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-14 19:19:08 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2023-10-14 19:19:08 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2023-10-14 19:19:08 DEBUG Logger:43 - /updateSkinSkinHash:Skinhash SteamPrice:100.0 SkinBaronPrice:101.0 SkinPortPrice:102.0 BitSkinsPrice:103.0 PictureURL:null
+2023-10-14 19:32:31 INFO  CsgoItemHandlerApplication:51 - Starting CsgoItemHandlerApplication using Java 19-ea with PID 28548 (E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\target\classes started by timle in E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler)
+2023-10-14 19:32:31 INFO  CsgoItemHandlerApplication:637 - No active profile set, falling back to 1 default profile: "default"
+2023-10-14 19:32:32 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-10-14 19:32:32 INFO  Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:32:32 INFO  StandardService:173 - Starting service [Tomcat]
+2023-10-14 19:32:32 INFO  StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-14 19:32:32 INFO  [/]:173 - Initializing Spring embedded WebApplicationContext
+2023-10-14 19:32:32 INFO  ServletWebServerApplicationContext:291 - Root WebApplicationContext: initialization completed in 1003 ms
+2023-10-14 19:32:33 INFO  Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:32:33 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-14 19:32:33 INFO  CsgoItemHandlerApplication:57 - Started CsgoItemHandlerApplication in 1.636 seconds (process running for 2.466)
+2023-10-14 19:32:36 INFO  [/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-14 19:32:36 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2023-10-14 19:32:36 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2023-10-14 19:32:36 DEBUG Logger:36 - /JSON
+2023-10-14 19:33:06 INFO  CsgoItemHandlerApplication:51 - Starting CsgoItemHandlerApplication using Java 19-ea with PID 24276 (E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\target\classes started by timle in E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler)
+2023-10-14 19:33:06 INFO  CsgoItemHandlerApplication:637 - No active profile set, falling back to 1 default profile: "default"
+2023-10-14 19:33:07 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-10-14 19:33:07 INFO  Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:33:07 INFO  StandardService:173 - Starting service [Tomcat]
+2023-10-14 19:33:07 INFO  StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-14 19:33:07 INFO  [/]:173 - Initializing Spring embedded WebApplicationContext
+2023-10-14 19:33:07 INFO  ServletWebServerApplicationContext:291 - Root WebApplicationContext: initialization completed in 926 ms
+2023-10-14 19:33:07 INFO  Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:33:07 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-14 19:33:07 INFO  CsgoItemHandlerApplication:57 - Started CsgoItemHandlerApplication in 1.57 seconds (process running for 2.402)
+2023-10-14 19:33:09 INFO  [/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-14 19:33:09 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2023-10-14 19:33:09 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2023-10-14 19:33:09 DEBUG Logger:36 - /JSON {CurrentTime=1697304789992, String=String, Boolean=false, Double=1.234, Int=10}
+2023-10-14 19:33:46 INFO  CsgoItemHandlerApplication:51 - Starting CsgoItemHandlerApplication using Java 19-ea with PID 28160 (E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\target\classes started by timle in E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler)
+2023-10-14 19:33:46 INFO  CsgoItemHandlerApplication:637 - No active profile set, falling back to 1 default profile: "default"
+2023-10-14 19:33:47 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2023-10-14 19:33:47 INFO  Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:33:47 INFO  StandardService:173 - Starting service [Tomcat]
+2023-10-14 19:33:47 INFO  StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-14 19:33:47 INFO  [/]:173 - Initializing Spring embedded WebApplicationContext
+2023-10-14 19:33:47 INFO  ServletWebServerApplicationContext:291 - Root WebApplicationContext: initialization completed in 941 ms
+2023-10-14 19:33:47 INFO  Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-14 19:33:47 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-14 19:33:47 INFO  CsgoItemHandlerApplication:57 - Started CsgoItemHandlerApplication in 1.578 seconds (process running for 2.46)
+2023-10-14 19:33:49 INFO  [/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-14 19:33:49 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2023-10-14 19:33:49 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2023-10-14 19:33:49 DEBUG Logger:36 - /JSON {CurrentTime=1697304829935, String=String, Boolean=false, Double=1.234, Int=10}
+2023-10-14 19:33:53 DEBUG Logger:36 - /JSON {CurrentTime=1697304833149, String=String, Boolean=false, Double=1.234, Int=10}
+2023-10-14 19:34:00 DEBUG Logger:71 - /updateSkin  {SkinHash=Skinhash, SkinBaronPrice=101.0, BitSkinsPrice=103.0, PictureURL=null, SkinPortPrice=102.0, Steamprice=100.0}
+2023-10-14 19:34:38 DEBUG Logger:36 - /JSON {CurrentTime=1697304878809, String=String, Boolean=false, Double=1.234, Int=10}

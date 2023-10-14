@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration  status="warn" name="CSGOItemHandler" >
+
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>
+            </PatternLayout>
+        </Console>
+
+        <File name="FileAppender" fileName="E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\src\main\resources\TempLogs.log">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>
+            </PatternLayout>
+        </File>
+
+
+    </Appenders>
+    <Loggers>
+        <Logger name="Logger" level="debug" additivity="false">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender" />
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender" />
+        </Root>
+    </Loggers>
+</Configuration>
