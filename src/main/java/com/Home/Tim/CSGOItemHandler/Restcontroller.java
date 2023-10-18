@@ -3,6 +3,7 @@ package com.Home.Tim.CSGOItemHandler;
 import jakarta.annotation.Nullable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -13,6 +14,7 @@ import java.util.Map;
 public class Restcontroller {
     private static final SkinHandler skinhander = new SkinHandler();
     private static final Logger logger = LogManager.getLogger("Logger");
+    private final SkinHandler shinhandler = new SkinHandler();
     @GetMapping("/")
     public String StartSeite(){
 
@@ -40,33 +42,23 @@ public class Restcontroller {
     }
 
     /**
-     * Updates a Skins pricevalues
+     * Updates a Skins pricevalue
      * If the Skin is not doesn't exist on the Server it is added to the tracked list.
      *
      * @param SkinHash
      * @param Steamprice
-     * @param SkinBaronPrice
-     * @param SkinPortPrice
-     * @param BitSkinsPrice
-     * @param PictureURL
+     *
      * @return List of passed Values as JSONObject
      */
     @PostMapping("/updateSkin")
     public Map<String,Object> updateSkin(@RequestParam("SkinHash") String SkinHash,
-                                         @RequestParam("Steamprice") Double Steamprice,
-                                         @RequestParam("SkinBaronPrice") Double SkinBaronPrice,
-                                         @RequestParam("SkinPortPrice") Double SkinPortPrice,
-                                         @RequestParam("BitSkinsPrice") Double BitSkinsPrice,
-                                         @RequestParam("PictureURL") @Nullable String PictureURL){
+                                         @RequestParam("Steamprice") Double Steamprice){
 
 
         HashMap<String,Object> returnmap = new HashMap<>();
         returnmap.put("SkinHash",SkinHash);
         returnmap.put("Steamprice",Steamprice);
-        returnmap.put("SkinBaronPrice",SkinBaronPrice);
-        returnmap.put("SkinPortPrice",SkinPortPrice);
-        returnmap.put("BitSkinsPrice",BitSkinsPrice);
-        returnmap.put("PictureURL",PictureURL);
+        returnmap.put("Success",skinhander.updateSkin(SkinHash,Steamprice));
 
         logger.debug("/updateSkin" +" "+returnmap );
 
@@ -79,10 +71,8 @@ public class Restcontroller {
      * @return
      */
     @GetMapping("/GetAllSkins")
-    public Map<String,Object> GetAllSkins(){
-
-
-        return null;
+    public String GetAllSkins(){
+        return skinhander.getAllSkinsAsJSON().toString();
     }
 
 
