@@ -11,6 +11,9 @@ import org.json.*;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -18,25 +21,26 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
-
+@Component
 public class SkinHandler {
 
     private static final Logger logger = LogManager.getLogger("Logger");
     //Stores all Skins
     public static TreeMap<String, Object> AllSkins = new TreeMap<>();
-    private final String FilePath = "E:\\Mehr Programmierstuff\\IntelliJProjekte\\CSGOItemHandler\\src\\main\\resources\\AllSkins.json";
+
+    private String FilePath;
     private final Gson gson = new Gson();
 
-    //Wenn live
-    //private final String FilePath = "/opt/csgoskins/Allskins.json";
-    // /var/log/myprograms/CSGOItemHandler/CSGOItemHandler.log
-    public SkinHandler() {
+    public SkinHandler(@Value("${file.path}") String FilePath ) {
+
+        this.FilePath = FilePath;
 
         logger.debug("Allskins Path " + FilePath);
 
         try {
 
             AllSkins = (TreeMap<String, Object>) parseFile();
+            logger.debug("AllSkinsContent at Start: "+getAllSkinsAsJSON());
         } catch (Exception e) {
             logger.error(e.getMessage());
         }
@@ -61,11 +65,12 @@ public class SkinHandler {
             } catch (IOException e) {
                 logger.error(e.getMessage());
             }
-            parseFile();
             logger.info("File created");
+            return new TreeMap<String, Object>();
 
 
         } else if (new File(FilePath).length() == 0) {
+            logger.info("File was empty returning new Map");
             return new TreeMap<String, Object>();
 
         }
@@ -102,7 +107,8 @@ public class SkinHandler {
             BufferedWriter bufferedwriter = Files.newBufferedWriter(Paths.get(FilePath));
             logger.debug("Writing Whole Map to file");
             String AllSkinsString = gson.toJson(AllSkins);
-            logger.debug("AllSkinsstring: " + AllSkinsString);
+            //Müllt Logfile nur voll
+            // logger.debug("AllSkinsstring: " + AllSkinsString);
             bufferedwriter.write(AllSkinsString);
             bufferedwriter.flush();
             bufferedwriter.close();

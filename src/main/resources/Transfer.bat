@@ -1,0 +1,1 @@
+scp "E:\Mehr Programmierstuff\IntelliJProjekte\CSGOItemHandler\target\CSGOItemHandler-1.0.5-SNAPSHOT.jar" tim@192.168.178.183:/opt/csgoskins
