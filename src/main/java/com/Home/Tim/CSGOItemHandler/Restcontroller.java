@@ -9,15 +9,21 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.random.RandomGeneratorFactory;
 
 @RestController
 public class Restcontroller {
     private static final Logger logger = LogManager.getLogger("Logger");
     @Value("${file.path}")
     String FilePath;
+
+    @Value("${allskinnames.path}")
+    String SkinnamePath;
     @Autowired
     private SkinHandler skinhander;//= new SkinHandler(FilePath);
 
@@ -80,7 +86,7 @@ public class Restcontroller {
     }
 
     /**
-     * Returns a JSONArray of all Tracked Skins with their according prices
+     * Returns all Skindata with their according prices that is locally stored as JSON
      *
      * @return
      */
@@ -89,6 +95,16 @@ public class Restcontroller {
         String allSkinsString = skinhander.getAllSkinsAsJSON().toString();
         logger.debug("/GetAllSkins " + allSkinsString);
         return allSkinsString;
+    }
+
+
+    @GetMapping("/GetAllSkinNames")
+    public String GetAllSkinNames() throws IOException {
+      //  String allSkinNames = skinhander.getAllSkinNames();
+       String retString = skinhander.getAllSkinNames();
+        String allSkinNames="yes";
+        logger.debug("/GetAllSkinNames " );
+        return retString;
     }
 
 
