@@ -21,6 +21,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -174,7 +175,7 @@ public class SkinHandler {
 
         for(int i=1;i<allSkins.size();i++){
 
-            allSkinString = allSkinString+","+allSkins.get(i);
+            allSkinString = allSkinString+","+normalisieren(allSkins.get(i));
 
         }
         System.out.println(allSkinString);
@@ -183,6 +184,22 @@ public class SkinHandler {
         bufferedwriter.flush();
         bufferedwriter.close();
         logger.debug("Sucessfully wrote to File");
+    }
+
+    /**
+     * Help Method to normalize the String to be URL readable
+     * @param s
+     * @return
+     */
+    public static String normalisieren(String s) {
+
+        s = s.replaceAll(" ", "%20");
+        s = s.replaceAll("\\|", "%7C");
+
+        URLEncoder.encode(s, StandardCharsets.UTF_8);
+
+        return s;
+
     }
 
 }
