@@ -193,9 +193,6 @@ public class SkinHandler {
      */
     public static String normalisieren(String s) {
 
-        s = s.replaceAll(" ", "%20");
-        s = s.replaceAll("\\|", "%7C");
-
         URLEncoder.encode(s, StandardCharsets.UTF_8);
 
         return s;

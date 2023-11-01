@@ -16,4 +16,7 @@ Available EndPoints:
 >/JSON
 <p>Simple TestMethod</p>
 
+>GetAllSkinNames
+<p> Returns a commaseperated Lif of all CSGO Item Hashnames</p>
+
 
