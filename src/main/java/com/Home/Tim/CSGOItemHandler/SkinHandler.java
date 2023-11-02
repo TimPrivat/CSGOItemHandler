@@ -169,13 +169,22 @@ public class SkinHandler {
 
         RestTemplate r = new RestTemplate();
         JSONObject wholeReturn = r.getForObject("http://csgobackpack.net/api/GetItemsList/v2/", JSONObject.class);
-        Map items_list = (Map) wholeReturn.get("items_list");
+        Map items_list_unsorted = (Map) wholeReturn.get("items_list");
+        TreeMap items_list = new TreeMap();
+        items_list.putAll(items_list_unsorted);
         ArrayList<String> allSkins = new ArrayList<>(items_list.keySet());
-        String allSkinString = allSkins.get(0);
+
+        String allSkinString = "";
+        if(items_list.get(allSkins.get(0)).toString().contains("average"))
+        allSkinString = normalisieren(allSkins.get(0));
 
         for(int i=1;i<allSkins.size();i++){
 
-            allSkinString = allSkinString+","+normalisieren(allSkins.get(i));
+            if(items_list.get(allSkins.get(i)).toString().contains("average")){
+
+                allSkinString = allSkinString+","+normalisieren(allSkins.get(i));
+            }
+
 
         }
         System.out.println(allSkinString);
@@ -191,7 +200,22 @@ public class SkinHandler {
      * @param s
      * @return
      */
-    public static String normalisieren(String s) {
+    public  String normalisieren(String s) {
+        s = s.replaceAll("&#39","%27");
+        s = s.replaceAll(" ", "%20");
+        s = s.replaceAll("\\|", "%7C");
+
+        URLEncoder.encode(s, StandardCharsets.UTF_8);
+
+        return s;
+
+    }
+
+    public String normalisierenBack(String s) {
+        s = s.replaceAll("%27", "\\'");
+        s = s.replaceAll("%20", " ");
+        s = s.replaceAll("%7C", "\\|");
+
 
         URLEncoder.encode(s, StandardCharsets.UTF_8);
 

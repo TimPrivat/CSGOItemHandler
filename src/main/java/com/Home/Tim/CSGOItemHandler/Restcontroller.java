@@ -73,7 +73,11 @@ public class Restcontroller {
     public Map<String, Object> updateSkin(@RequestParam("SkinHash") String SkinHash,
                                           @RequestParam("Steamprice") Double Steamprice) {
 
+        logger.debug("SkinHash: "+SkinHash);
+        logger.debug("Steamprice: "+Steamprice);
 
+
+        SkinHash = skinhander.normalisierenBack(SkinHash);
         HashMap<String, Object> returnmap = new HashMap<>();
         returnmap.put("SkinHash", SkinHash);
         returnmap.put("Steamprice", Steamprice);
