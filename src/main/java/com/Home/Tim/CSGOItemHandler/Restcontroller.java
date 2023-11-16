@@ -97,7 +97,7 @@ public class Restcontroller {
     @GetMapping("/GetAllSkins")
     public String GetAllSkins() {
         String allSkinsString = skinhander.getAllSkinsAsJSON().toString();
-        logger.debug("/GetAllSkins " + allSkinsString);
+        logger.debug("/GetAllSkins ");
         return allSkinsString;
     }
 

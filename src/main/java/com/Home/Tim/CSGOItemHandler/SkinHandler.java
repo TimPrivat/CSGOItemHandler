@@ -204,6 +204,7 @@ public class SkinHandler {
         s = s.replaceAll("&#39","%27");
         s = s.replaceAll(" ", "%20");
         s = s.replaceAll("\\|", "%7C");
+        s = s.replaceAll("&","%26");
 
         URLEncoder.encode(s, StandardCharsets.UTF_8);
 
@@ -215,6 +216,7 @@ public class SkinHandler {
         s = s.replaceAll("%27", "\\'");
         s = s.replaceAll("%20", " ");
         s = s.replaceAll("%7C", "\\|");
+        s = s.replaceAll("%26","&");
 
 
         URLEncoder.encode(s, StandardCharsets.UTF_8);
