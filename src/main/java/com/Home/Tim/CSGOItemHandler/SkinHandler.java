@@ -209,7 +209,7 @@ public class SkinHandler {
         RestTemplate r = new RestTemplate();
         HashMap<String,String> data = new HashMap<>();
         data.put("index",offset);
-        r.postForObject("192.168.178.183:"+serverPort+"/setIndex", data,String.class);
+        r.postForObject("http://192.168.178.183:"+serverPort+"/setIndex", data,String.class);
 
         return true;
     }
