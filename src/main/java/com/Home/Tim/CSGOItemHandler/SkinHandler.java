@@ -196,7 +196,7 @@ public class SkinHandler {
         logger.debug("Sucessfully wrote to File");
     }
 
-    @Async
+
     public boolean restartHost(@RequestParam("DockerID") String dockerID,
                                @RequestParam("ServerPort") String serverPort,
                                @RequestParam("offset") String offset) throws IOException, InterruptedException {
