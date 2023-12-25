@@ -18,6 +18,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
@@ -194,6 +195,25 @@ public class SkinHandler {
         bufferedwriter.close();
         logger.debug("Sucessfully wrote to File");
     }
+
+    @Async
+    public boolean restartHost(@RequestParam("DockerID") String dockerID,
+                               @RequestParam("ServerPort") String serverPort,
+                               @RequestParam("offset") String offset) throws IOException, InterruptedException {
+
+        logger.debug("restarting Dockercontainer: "+dockerID);
+        Runtime.getRuntime().exec("docker restart "+dockerID);
+        logger.debug("Offsetting to index: "+offset);
+        Thread.sleep(10000);
+        //set offset
+        RestTemplate r = new RestTemplate();
+        HashMap<String,String> data = new HashMap<>();
+        data.put("index",offset);
+        r.postForObject("192.168.178.183:"+serverPort+"/setIndex", data,String.class);
+
+        return true;
+    }
+
 
     /**
      * Help Method to normalize the String to be URL readable

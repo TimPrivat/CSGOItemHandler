@@ -89,6 +89,14 @@ public class Restcontroller {
 
     }
 
+    @PostMapping("/restartHost")
+    public boolean restartHost(@RequestParam("DockerID") String dockerID,
+                               @RequestParam("offset") String offset,
+                               @RequestParam("serverPort") String serverPort) throws IOException, InterruptedException {
+
+        return skinhander.restartHost(dockerID,serverPort,offset);
+    }
+
     /**
      * Returns all Skindata with their according prices that is locally stored as JSON
      *
