@@ -201,15 +201,33 @@ public class SkinHandler {
                                @RequestParam("ServerPort") String serverPort,
                                @RequestParam("offset") String offset) throws IOException, InterruptedException {
 
-        logger.debug("restarting Dockercontainer: "+dockerID);
-        Runtime.getRuntime().exec("docker restart "+dockerID);
-        logger.debug("Offsetting to index: "+offset);
-        Thread.sleep(10000);
-        //set offset
-        RestTemplate r = new RestTemplate();
-        HashMap<String,String> data = new HashMap<>();
-        data.put("index",offset);
-        r.postForObject("http://192.168.178.183:"+serverPort+"/setIndex", data,String.class);
+
+
+        Thread t1 = new Thread(new Runnable() {
+            public void run() {
+                logger.debug("restarting Dockercontainer: "+dockerID);
+                try {
+                    Runtime.getRuntime().exec("docker restart "+dockerID);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                logger.debug("Offsetting to index: "+offset);
+                try {
+                    Thread.sleep(60000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                //set offset
+                RestTemplate r = new RestTemplate();
+                HashMap<String,String> data = new HashMap<>();
+                data.put("index",offset);
+                r.postForObject("http://192.168.178.183:"+serverPort+"/setIndex", data,String.class);
+
+
+            }
+        });
+        t1.start();
+
 
         return true;
     }
