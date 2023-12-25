@@ -211,7 +211,7 @@ public class SkinHandler {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                logger.debug("Offsetting to index: "+offset);
+
                 try {
                     Thread.sleep(60000);
                 } catch (InterruptedException e) {
@@ -220,6 +220,7 @@ public class SkinHandler {
                 //set offset
                 RestTemplate r = new RestTemplate();
                 HashMap<String,String> data = new HashMap<>();
+                logger.debug("Offsetting to index: "+offset);
                 data.put("index",offset);
                 r.postForObject("http://192.168.178.183:"+serverPort+"/setIndex", data,String.class);
 
