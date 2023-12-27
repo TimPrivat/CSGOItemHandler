@@ -212,23 +212,21 @@ public class SkinHandler {
                     Runtime.getRuntime().exec("docker restart "+dockerID);
                     logger.debug("Waiting for 60 Seconds");
                     Thread.sleep(60000);
+                    //set offset
+
+                    logger.debug("Offsetting to index: "+offset);
+                    String command = "docker exec -it "+dockerID+ " /bin/bash -c \" curl localhost:"+serverPort+"/setIndex?index="+offset+"\"";
+                    logger.debug("Fireing off command: "+ command);
+
+                    Runtime.getRuntime().exec(command);
+
+                    logger.debug("Successfully sent offset");
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-                //set offset
-                RestTemplate r = new RestTemplate();
-                HashMap<String,String> data = new HashMap<>();
-                logger.debug("Offsetting to index: "+offset);
-                String uri = "http://192.168.178.183:"+serverPort+"/setIndex?index="+offset;
-                URI u = null;
-                try {
-                    u = new URI(uri);
-                } catch (URISyntaxException e) {
-                    throw new RuntimeException(e);
-                }
-                r.postForObject(u, data,String.class);
-                logger.debug("Successfully sent offset");
+
 
 
             }
