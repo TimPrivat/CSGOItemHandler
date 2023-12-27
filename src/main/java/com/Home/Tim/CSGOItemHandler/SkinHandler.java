@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -222,7 +224,14 @@ public class SkinHandler {
                 HashMap<String,String> data = new HashMap<>();
                 logger.debug("Offsetting to index: "+offset);
                 data.put("index",offset);
-                r.postForObject("http://192.168.178.183:"+serverPort+"/setIndex", data,String.class);
+                String uri = "http://192.168.178.183:"+serverPort+"/setIndex";
+                URI u = null;
+                try {
+                    u = new URI(uri);
+                } catch (URISyntaxException e) {
+                    throw new RuntimeException(e);
+                }
+                r.postForObject(u, data,String.class);
 
 
             }
