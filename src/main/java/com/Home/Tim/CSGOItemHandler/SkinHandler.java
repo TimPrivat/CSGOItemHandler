@@ -210,15 +210,12 @@ public class SkinHandler {
                 logger.debug("restarting Dockercontainer: "+dockerID);
                 try {
                     Runtime.getRuntime().exec("docker restart "+dockerID);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
+                    logger.debug("Waiting for 60 Seconds");
+                    Thread.sleep(60000);
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
 
-                try {
-                    Thread.sleep(60000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
                 //set offset
                 RestTemplate r = new RestTemplate();
                 HashMap<String,String> data = new HashMap<>();
