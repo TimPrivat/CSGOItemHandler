@@ -218,7 +218,7 @@ public class SkinHandler {
                     String command = "docker exec -it "+dockerID+ " /bin/bash -c \"curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"\"";
                     logger.debug("Fireing off command: "+ command);
 
-                    Runtime.getRuntime().exec(command);
+                    Runtime.getRuntime().exec("docker exec -it "+dockerID+ " /bin/bash -c \"curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"\"");
 
                     logger.debug("Successfully sent offset");
 
