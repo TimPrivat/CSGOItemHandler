@@ -223,7 +223,7 @@ public class SkinHandler {
                     logger.debug("Successfully sent offset");
 
                 } catch (Exception e) {
-                    e.printStackTrace();
+                 logger.error(e.getMessage());
                 }
 
 
