@@ -220,8 +220,7 @@ public class SkinHandler {
                 RestTemplate r = new RestTemplate();
                 HashMap<String,String> data = new HashMap<>();
                 logger.debug("Offsetting to index: "+offset);
-                data.put("index",offset);
-                String uri = "http://192.168.178.183:"+serverPort+"/setIndex";
+                String uri = "http://192.168.178.183:"+serverPort+"/setIndex?index="+offset;
                 URI u = null;
                 try {
                     u = new URI(uri);
@@ -229,6 +228,7 @@ public class SkinHandler {
                     throw new RuntimeException(e);
                 }
                 r.postForObject(u, data,String.class);
+                logger.debug("Successfully sent offset");
 
 
             }
