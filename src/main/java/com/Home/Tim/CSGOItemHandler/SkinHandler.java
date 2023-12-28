@@ -219,7 +219,8 @@ public class SkinHandler {
 
 
                     File f = new File("recources/setIndex.sh");
-                    String[] command = { f.getAbsolutePath(), dockerID, serverPort,offset };
+                    String homeDir = System.getenv("HOME");
+                    String[] command = { homeDir+f.getAbsolutePath(), dockerID, serverPort,offset };
 
 
 
