@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Date;
@@ -31,8 +32,10 @@ public class Restcontroller {
     @GetMapping("/")
     public String StartSeite() {
 
-        return "StartSeite";
+        //return "StartSeite";
 
+        File f = new File("recources/setIndex.sh");
+        return f.getAbsolutePath();
     }
 
     /**
