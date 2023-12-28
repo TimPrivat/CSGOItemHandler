@@ -215,12 +215,16 @@ public class SkinHandler {
                     //set offset
 
                     logger.debug("Offsetting to index: "+offset);
-                    String command = "docker exec -it "+dockerID+ " /bin/bash -c 'curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"'";
-                    logger.debug("Fireing off command: "+ command);
+                  //  String command = "docker exec -it "+dockerID+ " /bin/bash -c 'curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"'";
 
-                    ProcessBuilder processBuilder = new ProcessBuilder();
-                    processBuilder.command("bash", "-c", command);
 
+                    File f = new File("recources/setIndex.sh");
+                    String[] command = { f.getAbsolutePath(), dockerID, serverPort,offset };
+
+
+
+                    logger.debug("Fireing off command:");
+                    Process p = Runtime.getRuntime().exec(command);
 
                     logger.debug("Successfully sent offset");
 
