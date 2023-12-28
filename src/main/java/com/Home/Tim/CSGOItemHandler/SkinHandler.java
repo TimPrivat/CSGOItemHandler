@@ -223,7 +223,7 @@ public class SkinHandler {
 
 
                     logger.debug("Fireing off command:");
-                   runScript("sh docker exec -it "+dockerID+ " /bin/bash -c 'curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"'");
+                   runScript("/bin/bash docker exec -it "+dockerID+ " /bin/bash -c 'curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"'");
 
                     logger.debug("Successfully sent offset");
 
