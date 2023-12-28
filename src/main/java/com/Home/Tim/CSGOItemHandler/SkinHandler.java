@@ -219,11 +219,11 @@ public class SkinHandler {
                     //set offset
 
                     logger.debug("Offsetting to index: "+offset);
-                  //  String command = "docker exec -it "+dockerID+ " /bin/bash -c 'curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"'";
-
+                    String command = "docker exec -it "+dockerID+ " /bin/bash -c 'curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"'";
+                    logger.debug("Firing off command: "+command);
 
                     logger.debug("Fireing off command:");
-                   runScript("/bin/bash docker exec -it "+dockerID+ " /bin/bash -c 'curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"'");
+                   runScript("sh "+command);
 
                     logger.debug("Successfully sent offset");
 
