@@ -4,9 +4,13 @@ package com.Home.Tim.CSGOItemHandler;
 import com.google.common.base.Splitter;
 import com.google.gson.Gson;
 import jakarta.annotation.Nullable;
+import org.apache.commons.exec.CommandLine;
+import org.apache.commons.exec.DefaultExecutor;
+import org.apache.commons.exec.ExecuteException;
 import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import org.json.*;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -218,14 +222,8 @@ public class SkinHandler {
                   //  String command = "docker exec -it "+dockerID+ " /bin/bash -c 'curl -X POST 127.0.0.1:"+serverPort+"/setIndex?index="+offset+"'";
 
 
-                    File f = new File("recources/setIndex.sh");
-                    String homeDir = System.getenv("HOME");
-                    String[] command = { homeDir+f.getAbsolutePath(), dockerID, serverPort,offset };
-
-
-
                     logger.debug("Fireing off command:");
-                    Process p = Runtime.getRuntime().exec(command);
+                   runScript("sh recources/setIndex.sh");
 
                     logger.debug("Successfully sent offset");
 
@@ -274,5 +272,23 @@ public class SkinHandler {
         return s;
 
     }
+
+    public static void runScript(String command) {
+        String sCommandString = command;
+        CommandLine oCmdLine = CommandLine.parse(sCommandString);
+        DefaultExecutor oDefaultExecutor = new DefaultExecutor();
+        oDefaultExecutor.setExitValue(0);
+        int iExitValue = 0;
+        try {
+            iExitValue = oDefaultExecutor.execute(oCmdLine);
+            System.out.println("Command Executed and finished");
+
+        } catch (ExecuteException e) {
+            System.err.println("Execution failed.");
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.err.println("permission denied.");
+            e.printStackTrace();
+        }
 
 }
